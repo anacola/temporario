@@ -7,11 +7,11 @@ package Exercicio5;
  * 3) Faca override do metodo saque para que ele considere o limite na hora de 
  *    verificar se existe ou nao saldo disponivel.
  */
-public class ContaEspecial{
-	private double limite;
-
-	public ContaEspecial(double saldoInicial, String num, Cliente tit,
-			Agencia ag, double limite) {
+public class ContaEspecial extends Conta {
+	private double limite;	
+	
+	public ContaEspecial(double saldoInicial, String num, Cliente tit, Agencia ag, double limite) {
+		super(saldoInicial, num, tit, ag); 
 		this.limite = limite;
 	}
 	
@@ -26,7 +26,7 @@ public class ContaEspecial{
     public void imprimeDados() {
         System.out.println("\n ============ CONTA POUPANCA ====================");
         //Inclua a chamada abaixo para invocar o método imprimeDados da superclasse
-        //super.imprimeDados();
+        super.imprimeDados();
         System.out.println("Limite: " + limite);
         System.out.println("===================================================\n");
 

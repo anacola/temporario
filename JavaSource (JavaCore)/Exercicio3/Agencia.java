@@ -21,8 +21,8 @@ public class Agencia {
 	 */
 	public void imprimeDados() {
 		System.out.println("----------------------");
-		System.out.println("Agencia no. " + numero);
-		System.out.println("Banco no." + banco);
+		System.out.println("Agencia no. " + this.numero);
+		System.out.println("Banco no." + banco.getNome());
 		System.out.println("----------------------");
 	}
 

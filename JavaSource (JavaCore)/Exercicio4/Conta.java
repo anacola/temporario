@@ -43,9 +43,9 @@ public class Conta {
 
 	public void imprimeDados() {
 		System.out.println("\n----------------------------");
-		System.out.println(" AGENCIA:" + agencia);
+		System.out.println(" AGENCIA:" + this.agencia.getNumero());
 		System.out.println(" NUMERO : " + numero);
-		System.out.println(" TITULAR: " + titular);
+		System.out.println(" TITULAR: " + this.titular.nome);
 		System.out.println(" SALDO  : R$" + saldo);
 		System.out.println("-----------------------------\n");
 	}
@@ -65,6 +65,10 @@ public class Conta {
 	public Cliente getTitular() {
 		return titular;
 	}
+	
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
 
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
@@ -77,5 +81,5 @@ public class Conta {
 	public void setAgencia(Agencia agencia) {
 		this.agencia = agencia;
 	}
-
-}
+}	
+	

@@ -1,3 +1,4 @@
+
 package Exercicio4;
 
 public class Agencia {
@@ -22,7 +23,7 @@ public class Agencia {
 	public void imprimeDados() {
 		System.out.println("----------------------");
 		System.out.println("Agencia no. " + numero);
-		System.out.println("Banco no." + banco);
+		System.out.println("Banco no." + this.banco.nome);
 		System.out.println("----------------------");
 	}
 

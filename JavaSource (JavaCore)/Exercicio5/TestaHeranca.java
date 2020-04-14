@@ -19,7 +19,8 @@ public class TestaHeranca {
         * 5. Imprima os dados da conta especial 
         */
         
-        ContaEspecial contaEsp1 = null; // 1a. conta especial
+        ContaEspecial contaEsp1 = new ContaEspecial(conta.saldo, conta.getNumero(), conta.getTitular(), conta.getAgencia(), 3000 );
+        
         
         
         //analise o resultado do código abaixo após a definição da herança

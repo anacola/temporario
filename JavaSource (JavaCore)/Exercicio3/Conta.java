@@ -16,6 +16,12 @@ public class Conta {
 	private Agencia agencia;
 	private Cliente titular;
 
+	public void inicializaConta(int i, String numeroConta, Agencia agenciaConta, Cliente titularConta) {
+        this.saldo = i;
+        this.numero = numeroConta;
+        this.agencia = agenciaConta;
+        this.titular = titularConta;
+    }
 
 	public void saque(double valor) {
 		System.out.println("Realizando saque de R$ " + valor + " da conta "
@@ -41,9 +47,9 @@ public class Conta {
 
 	public void imprimeDados() {
 		System.out.println("\n----------------------------");
-		System.out.println(" AGENCIA:" + agencia);
+		System.out.println(" AGENCIA:" + this.agencia.getNumero());
 		System.out.println(" NUMERO : " + numero);
-		System.out.println(" TITULAR: " + titular);
+		System.out.println(" TITULAR: " + this.titular.nome);
 		System.out.println(" SALDO  : R$" + saldo);
 		System.out.println("-----------------------------\n");
 	}

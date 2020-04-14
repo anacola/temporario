@@ -17,6 +17,20 @@ package Exercicio1;
 class ControleFluxoFor07 {
 
     public static void main(String[] args) {
+    	int resto2, resto3;
     	
+    	for(int i = 100;  i<=200; i++){
+    		resto2=i%2;
+    		resto3=i%3;
+    				
+    		if(resto2 == 0 && resto3 ==0) {
+    			System.out.println(i +" é divisivel por 2 e por 3");
+    		} else if (resto2 == 0) {
+    			System.out.println(i + " é divisivel por 2");
+    		}else if( resto3 == 0) {
+    			System.out.println(i + " é divisivel por 3");
+    		}
+    
+    	}
     }
 }

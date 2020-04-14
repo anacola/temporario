@@ -9,11 +9,6 @@ public class ContaEspecial extends Conta {
 		this.limite = limite;
 	}
 
-	public ContaEspecial(String num, Cliente tit, Agencia ag, double limite) {
-		super(num, tit, ag);
-		this.limite = limite;
-	}
-
 	public double getLimite() {
 		return limite;
 	}

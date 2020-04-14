@@ -27,7 +27,7 @@ public class TesteCastUp {
 		// acione o metodo imprimirTributavel para
 		// todas as contas e investimentos
 		// ----------------------------------------
-		imprimirTributavel(conta1);
+		imprimirTributavel(investimento);
 
 		// Coloque todas as contas e investimentos em um array
 		Tributavel[] trib = new Tributavel[4];
