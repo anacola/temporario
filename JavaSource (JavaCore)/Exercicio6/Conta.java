@@ -1,5 +1,5 @@
 package Exercicio6;
-public class Conta {
+public class Conta implements Tributavel {
 
     protected double saldo;
     private String numero;
@@ -125,5 +125,21 @@ public class Conta {
 
     public double getCPMFAcumulado() {
         return acumuladorCPMF;
-    }  
+    }
+
+	@Override
+	public String getDescricaoTributavel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public double calcularImpostos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+    
+    
+    
+    
 }

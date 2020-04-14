@@ -3,7 +3,7 @@ package Exercicio9;
 import java.util.ArrayList;
 import java.util.List;
 
-import Exercicio6solucao.Tributavel;
+//import Exercicio6solucao.Tributavel;
 
 public class TesteList {
 
@@ -18,6 +18,14 @@ public class TesteList {
         c5.setCpf("120.478.457-10");
         c5.setTelefone("45632210");
         
+        ArrayList<Cliente> clientes = new ArrayList<>();
+        clientes.add(c1);
+        clientes.add(c2);
+        clientes.add(c3);
+        clientes.add(c4);
+        clientes.add(c5);
+        
+        
         /*
          *  1. Coloque todos os clientes (Objetos) acima em um ArrayList, 
          *  sem mexer no código acima.
@@ -30,17 +38,27 @@ public class TesteList {
          *  2. Imprima estes clientes no console
          */
         
-        System.out.println(/*coloque algo aqui*/);
+        System.out.println(clientes);
+        
         
         /*
          *  3. Remova o cliente de numero 4 e imprima o resultado no console novamente.
          */
-        
+        for(int i = 0; i < clientes.size(); i++)
+        {
+            Cliente removerCliente = clientes.get(i);
 
+            if(removerCliente.getNome().equals("Victor"))
+            {
+                clientes.remove(removerCliente);
+                break;
+            }
+        }
 
         /*
          *  4. Imprima somente os nomes dos clientes.
          */
+        System.out.println(clientes);
         
    
     }

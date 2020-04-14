@@ -27,10 +27,17 @@ public class TesteCastUp {
 		// acione o metodo imprimirTributavel para
 		// todas as contas e investimentos
 		// ----------------------------------------
-		imprimirTributavel(investimento);
+		imprimirTributavel(conta1);
+		imprimirTributavel(conta2);
+		imprimirTributavel(conta3);
 
+			
 		// Coloque todas as contas e investimentos em um array
 		Tributavel[] trib = new Tributavel[4];
+			trib[0] = conta1;
+			trib[1] = conta2;
+			trib[2] = conta3;
+			trib[3] = investimento;
 
 		System.out.println("imposto total devido: "
 				+ calcularImpostoTotalDevido(trib));

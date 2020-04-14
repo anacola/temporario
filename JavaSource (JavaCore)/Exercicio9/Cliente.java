@@ -13,6 +13,10 @@ public class Cliente {
 		this.cpf = cpf;
 	}
     
+    public Cliente() {
+    	
+    }
+  
     //É necessário inserir algo aqui para o c5 funcionar
     
 

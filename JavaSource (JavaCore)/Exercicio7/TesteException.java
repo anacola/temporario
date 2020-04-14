@@ -1,10 +1,21 @@
 package Exercicio7;
 
-import Exercicio7solucao.SaldoInsuficienteException;
+//import Exercicio7solucao.SaldoInsuficienteException;
 
 class TesteException {
 
     public static void main(String args[]) {
+    	Banco banco = new Banco("Bradesco", 0001);
+    	
+    	Agencia agencia = new Agencia("123", banco);
+    	
+    	Cliente cliente = new Cliente("Ana Carolina", "123;456;789-00");
+    	
+    	ContaEspecial contaEspecial = new ContaEspecial(3000, "98765", cliente, agencia, 500);
+    	
+    	
+    	ContaPoupanca contaPoupanca = new ContaPoupanca(600, "87654", cliente, agencia, "01/02");
+    	
         
 		/*
     	 * 1) Instancie o banco, inserindo o nome e numero.
@@ -18,8 +29,24 @@ class TesteException {
     	/*
     	 * 6) Trate as excessões.
     	 */
-        contaEspecial.saque(2950.0);
-        contaPoupanca.saque(340.0);
+    	
+    	
+        try {
+			contaEspecial.saque(2950.0);
+		} catch (SaldoInsuficienteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        	finally {contaEspecial.imprimeDados();};       
+        try {
+			contaPoupanca.saque(340.0);
+		} catch (SaldoInsuficienteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        finally{contaPoupanca.imprimeDados();};
+        
+       
         
         /*
          * 7) Chame o metodo que imprime os dados no console da classe ContaEspecial
